@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.acs.lpd.leccoc.Sanction">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer_sanction"
+        android:layout_margin="5sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="Select Application Type"
+                    android:textColor="@color/primary_text" />
+
+                <TextView
+                    android:id="@+id/app_type_sanction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:background="@drawable/rounded_corners"
+                    android:drawableRight="@drawable/dropdown"
+                    android:gravity="center_vertical"
+                    android:onClick="getApplicationType"
+                    android:padding="10sp"
+                    android:tag="-1"
+                    android:text="Select"
+                    android:textColor="@color/primary_text"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/app_sanction_ly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5sp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="Select Application"
+                    android:textColor="@color/primary_text" />
+
+                <TextView
+                    android:id="@+id/app_sanction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:background="@drawable/rounded_corners"
+                    android:drawableRight="@drawable/dropdown"
+                    android:gravity="center_vertical"
+                    android:onClick="getApplication"
+                    android:padding="10sp"
+                    android:tag="-1"
+                    android:text="Select"
+                    android:textColor="@color/primary_text"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/land_extent_sanction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:text="Land Extent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="Survey Number"
+                    android:textColor="@color/primary_text" />
+
+                <TextView
+                    android:id="@+id/survey_no_sanction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:background="@drawable/rounded_corners"
+                    android:gravity="center_vertical"
+                    android:padding="8sp"
+                    android:textColor="@color/primary_text"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="Select Crop"
+                    android:textColor="@color/primary_text" />
+
+                <TextView
+                    android:id="@+id/crop_sanction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:background="@drawable/rounded_corners"
+                    android:drawableRight="@drawable/dropdown"
+                    android:gravity="center_vertical"
+                    android:onClick="getCropData"
+                    android:padding="10sp"
+                    android:tag="-1"
+                    android:text="Select"
+                    android:textColor="@color/primary_text"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="Select Scale Of Finance"
+                    android:textColor="@color/primary_text" />
+
+                <TextView
+                    android:id="@+id/scale_finance_sanction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:background="@drawable/rounded_corners"
+                    android:drawableRight="@drawable/dropdown"
+                    android:gravity="center_vertical"
+                    android:onClick="getSOF"
+                    android:padding="10sp"
+                    android:tag="-1"
+                    android:text="Select"
+                    android:textColor="@color/primary_text"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="Select Bank"
+                    android:textColor="@color/primary_text" />
+
+                <TextView
+                    android:id="@+id/bank_sanction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:background="@drawable/rounded_corners"
+                    android:drawableRight="@drawable/dropdown"
+                    android:gravity="center_vertical"
+                    android:onClick="getBankDetails"
+                    android:padding="10sp"
+                    android:tag="-1"
+                    android:text="Select"
+                    android:textColor="@color/primary_text"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="Select Branch"
+                    android:textColor="@color/primary_text" />
+
+                <TextView
+                    android:id="@+id/branch_sanction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:background="@drawable/rounded_corners"
+                    android:drawableRight="@drawable/dropdown"
+                    android:gravity="center_vertical"
+                    android:onClick="getBranchDtls"
+                    android:padding="10sp"
+                    android:tag="-1"
+                    android:text="Select"
+                    android:textColor="@color/primary_text"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="IFSC Code"
+                    android:textColor="@color/primary_text" />
+
+                <TextView
+                    android:id="@+id/ifsc_sanction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:background="@drawable/rounded_corners"
+                    android:gravity="center_vertical"
+                    android:padding="8sp"
+                    android:textColor="@color/primary_text"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="Account Number : "
+                    android:textColor="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/accountno_sanction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:gravity="center_vertical"
+                    android:maxLength="20"
+                    android:textColor="@color/primary_text"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="Loan Amount"
+                    android:textColor="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/loanamount_sanction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:gravity="center_vertical"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/primary_text"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="Mobile Number"
+                    android:textColor="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/mobile_sanction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="@color/primary_text"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5sp"
+                        android:text="Loan Issue Date"
+                        android:textColor="@color/primary_text" />
+
+                    <TextView
+                        android:id="@+id/loanissuedate_sanction"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5sp"
+                        android:background="@drawable/rounded_corners"
+                        android:drawableRight="@drawable/date"
+                        android:gravity="center_vertical"
+                        android:onClick="setLoanIssueDate"
+                        android:padding="10sp"
+                        android:textColor="@color/primary_text"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5sp"
+                        android:text="Loan Due Date"
+                        android:textColor="@color/primary_text" />
+
+                    <TextView
+                        android:id="@+id/loanduedate_sanction"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5sp"
+                        android:background="@drawable/rounded_corners"
+                        android:drawableRight="@drawable/date"
+                        android:gravity="center_vertical"
+                        android:padding="10sp"
+                        android:textColor="@color/primary_text"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:drawableRight="@drawable/add"
+                android:gravity="center_vertical|right"
+                android:onClick="goUploadDocs"
+                android:text="Upload Document    "
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageview_sanction"
+                android:visibility="gone"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center"
+                android:layout_margin="5sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footer_sanction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2sp"
+            android:drawableRight="@drawable/save"
+            android:gravity="center_vertical|right"
+            android:onClick="goSaveData"
+            android:text="Save Data      "
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>
